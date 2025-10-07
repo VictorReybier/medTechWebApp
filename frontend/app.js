@@ -1,4 +1,4 @@
-const BACKEND_URL = 'https://github.com/VictorReybier/medTechWebApp.git';
+const BACKEND_URL = 'https://victorreybier.github.io/medTechWebApp/backend';
 
 const fileInput = document.getElementById('fileInput');
 const submitBtn = document.getElementById('submitBtn');

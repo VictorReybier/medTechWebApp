@@ -1,51 +1,45 @@
 <!doctype html>
 <html lang="fr">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>MedTech Mini Web-App</title>
-<link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-<main class="container">
-<h1>MedTech — Image Phase Simulator</h1>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>MedTech Mini Web-App</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <main class="container">
+            <h1>MedTech — Image Phase Simulator</h1>
 
+            <section class="controls">
+                <label class="file-label">Upload image
+                    <input id="fileInput" type="file" accept="image/*" />
+                </label>
 
-<section class="controls">
-<label class="file-label">Upload image
-<input id="fileInput" type="file" accept="image/*" />
-</label>
+                <div class="phase-select">
+                    <label>
+                        <input type="radio" name="phase" value="arterial" checked /> Arterial (increase contrast)
+                    </label>
+                    <label>
+                        <input type="radio" name="phase" value="venous" /> Venous (gaussian smoothing)
+                    </label>
+                </div>
 
+                <button id="submitBtn">Process</button>
+                <div id="status" class="status"></div>
+            </section>
 
-<div class="phase-select">
-<label><input type="radio" name="phase" value="arterial" checked /> Arterial (increase contrast)</label>
-<label><input type="radio" name="phase" value="venous" /> Venous (gaussian smoothing)</label>
-</div>
+            <section class="viewer">
+                <div class="image-col">
+                    <h2>Original</h2>
+                    <img id="originalImg" alt="original image" />
+                </div>
+                <div class="image-col">
+                    <h2>Processed</h2>
+                    <img id="processedImg" alt="processed image" />
+                </div>
+            </section>
+        </main>
 
-
-<button id="submitBtn">Process</button>
-<div id="status" class="status"></div>
-</section>
-
-
-<section class="viewer">
-<div class="image-col">
-<h2>Original</h2>
-<img id="originalImg" alt="original image" />
-</div>
-<div class="image-col">
-<h2>Processed</h2>
-<img id="processedImg" alt="processed image" />
-</div>
-</section>
-
-
-<footer>
-<small>Frontend statique (GitHub Pages) — Backend: external server (FastAPI)</small>
-</footer>
-</main>
-
-
-<script src="app.js"></script>
-</body>
+        <script src="app.js"></script>
+    </body>
 </html>

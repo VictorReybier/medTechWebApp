@@ -1,4 +1,4 @@
-const BACKEND_URL = 'https://YOUR_BACKEND_DOMAIN.example.com';
+const BACKEND_URL = 'https://medtechwebapp.onrender.com';
 const fileInput = document.getElementById('fileInput');
 const submitBtn = document.getElementById('submitBtn');
 const statusEl = document.getElementById('status');

@@ -14,11 +14,9 @@ fileInput.addEventListener('change', (e) => {
     if (f) {
         originalImg.src = URL.createObjectURL(f);
         processedImg.src = '';
-        viewer.style.display = 'flex';
     } else {
         originalImg.src = '';
         processedImg.src = '';
-        viewer.style.display = 'none';
     }
 });
 
